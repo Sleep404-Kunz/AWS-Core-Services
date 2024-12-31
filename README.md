@@ -153,7 +153,7 @@ No additional charge for IAM. Charges apply only when you access other AWS servi
 
 In the example, S3 is being used to host a static website. The content is uploaded to S3 and directed to Amazon CloudFront to deliver the content to the internet.
 
-<img src = "https://github.com/user-attachments/assets/0ef3502f-d19b-4272-82e5-0b0ad02ad64e" width = "400">
+<img src = "https://github.com/user-attachments/assets/0ef3502f-d19b-4272-82e5-0b0ad02ad64e" width = "600">
 
 Amazon S3 has the following benefits:
 - Offers durability, availabiltiy, performance, security, and scalability.
@@ -178,7 +178,7 @@ Pay only for what you use, no minimum fee. May vary across regions.
 
 In the example below, a user uploads a photo into Amazon S3-Bucket A. This triggers the Lambda code to run and resize the photo and place the photo in Amazon S3-Bucket B. From Bucket B user can download the resized photo. Lambda then sends and email or text message to the apporpriate users to alert them that the photo is ready to download.
 
-<img src = "https://github.com/user-attachments/assets/2054d9b3-64f6-429a-be92-e931dc2e9e6e" width = "400">
+<img src = "https://github.com/user-attachments/assets/2054d9b3-64f6-429a-be92-e931dc2e9e6e" width = "500">
 
 Amazon Lambda has the following benefits:
 - Serverless, so managment is not required.
@@ -200,7 +200,7 @@ Pay only for what you use. Charges based on the number of requests and the durat
 
 In the example below, a user accesses an application that is stored in S3. The user chooses an option to recieve data. Amazon API gateway will then trigger Lambda to retrieve data from DynamoDB and send it back to the user's interface.
 
-<img src = "https://github.com/user-attachments/assets/a49b3d61-ef1c-4be8-9064-e5945bdd1c87" width = "400">
+<img src = "https://github.com/user-attachments/assets/a49b3d61-ef1c-4be8-9064-e5945bdd1c87" width = "600">
 
 Amazon DynamoDB has the following benefits:
 - Supports large scale applications with consistent, single-digit millisecond response times at any scale.
