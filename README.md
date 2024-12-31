@@ -171,13 +171,48 @@ Amazon S3 has the following benefits:
 Pay only for what you use, no minimum fee. May vary across regions. 
 
 ## 8. AWS Lambda
--
+- Serverless compute service that can run function code without provisioning or managing servers.
+- Run code for any application or backend service.
+- Removes all administration for application or backend services that can be processed in snippets of code.
+- Automatically and precisely allocates compute power based on the incoming request or event for any scale of traffic. 
 
-<>
+In the example below, a user uploads a photo into Amazon S3-Bucket A. This triggers the Lambda code to run and resize the photo and place the photo in Amazon S3-Bucket B. From Bucket B user can download the resized photo. Lambda then sends and email or text message to the apporpriate users to alert them that the photo is ready to download.
+
+<img src = "https://github.com/user-attachments/assets/2054d9b3-64f6-429a-be92-e931dc2e9e6e" width = "400">
 
 Amazon Lambda has the following benefits:
-
+- Serverless, so managment is not required.
+- Built in continuous scaling that scales in response to each event.
+  
 *How to use Lambda:*
+- Web applications: Combining Lambda with other AWS services can build powerful web applications that automatically scale up and down with zero administrative effort for scaling, backup, and redundancy.
+- Data Processing: Code can be executed in response to changes in data, shifts in state or actions by users. Can also directly be triggered by AWS services or orchestrated into workflows.
+- Real-time file processing: Lambda can process data immediately after an upload. Can also be connected to EFS to enable massively parallel shared access for large-scale file processing.
+- Real-time stream processing: Lambda and Kinesis can be used to process real-time streaming data. (Application activity tracking, transaction order processing, click stream analysis.) Can also be used for data cleansing, metrics and generation, log filtering, indexing, social media analysis, and IoT device data telemetry and metering.
+  
+***Lambda has a 15-min limit on its runtime for each invocation. Computing for more than 15 mins need to use and EC2 instance.***
 
-***Imp***
+Pay only for what you use. Charges based on the number of requests and the duration of the code running. No charge when code is not running. 
+
 ## 9. Amazon DynamoDB
+- Serverless non-relational database to store and retrieve any amount of data and serve any level of request traffic.
+- No administrative burden of operating and scaling (Hardware provisioning, setup and configuration, replication, software patching, cluster scaling). 
+
+In the example below, a user accesses an application that is stored in S3. The user chooses an option to recieve data. Amazon API gateway will then trigger Lambda to retrieve data from DynamoDB and send it back to the user's interface.
+
+<img src = "https://github.com/user-attachments/assets/a49b3d61-ef1c-4be8-9064-e5945bdd1c87" width = "400">
+
+Amazon DynamoDB has the following benefits:
+- Supports large scale applications with consistent, single-digit millisecond response times at any scale.
+- Serverless.
+- Supports ACID transactions for bysiness-critical applications at scale. Encrypts all data by default and provides fine-grained identity and access control on all tables.
+
+*How to use DynamoDB*
+- Retail: Use common DynamoDB desgin patterns to deliver consistently low latency for mission-critical use cases. Provides high-velocity, extreme-scaled events such as Amazon Prime Day, whose magnitudes are difficult to forecast.
+- Gaming: Used in all capabilities of game platforms, including game state, player data, session history, and leaderboards. Provides scaling to millions of concurrent users.
+- Banking: Build cloud-native applications to increase agility, reduce time to market, and minimize operational overhead. Ensures security, and availability.
+- Ad tech: Stores marketing data such as user profiles, user events, clicks, and visited links. 
+
+***DynamoDB is a non-relational database.(Does not store data in rows and columns) Uses key value pair model***
+
+DynamoDB charges for reading, writing, and storing data in DynamoDB tables, along with any optional features enabled. Has 2 capacity modes. On-demand and provisioned, with specific billing options for each. 
