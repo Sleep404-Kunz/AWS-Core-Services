@@ -116,14 +116,68 @@ You can use SNS to create topics.(**Topic**: An access point identifying a speci
 
 SNS has no upfront fees, no commitments or long term contracts. Pay for what you use and whay type of topic.
 
-## 6. IAM
--
+## 6. IAM (Identity and Access Management)
+- Centralized security managment system that is included in every AWS account to control identity access to AWS services.
+- Identities in IAM are users, groups and roles.
+- Principle of least privilege.
+- Able to grant someone from different AWS account access to your account to perform specific tasks. 
+
+<img src = "https://github.com/user-attachments/assets/aee445bd-7960-4286-978a-2a4f5217d9ab" width = "400">
+
+**a. User**: Entity that is created in AWS. Represents the person or service who uses the IAM user to interact with AWS.
+
+**b. Group**: Collection of IAM users. Specify permissions for a collection of users for easier managment.
+
+**c. Role**: Identity with permission policies that are attacehd to it. An IAM user or service can assume these policies to temporarily take on different permissions for a specific task. 
 
 Amazon IAM has the following benefits:
+- Simple user interface.
+- System-generated policies and option to create additional custom policies that meet specific requirements. 
 
 *How to use IAM*
+- Fine-grained access control: Control access to AWS service APIs and specific resources. Add specific conditions for how a user can use AWS resources or their originting IP address.
+- Multi-factor authentication: MFA available at no extra cost. Users are required to prove physical possession of hardware MFA token or MFA enabled mobile device with a code.
+- Analyze access: Helps analyze access across AWS environment. Security teams and administrators can validate policies. Identify and refine policies to adhere to the principle of least provolege.
+  
+***AWS evaluates policies depending on types of policies:***
+***- Implicit deny: Denies a user, group or a role access. Default setting, requires explicit allow IAM policy attached to the identity.***
+***- Explicit allow: Overrides implicity deny. Grants full or partial access.***
+***- Explicit deny: Restricts the identity's access. Explicit allow cannot override explicit deny.***
+
+No additional charge for IAM. Charges apply only when you access other AWS services by using IAM's user's credentials.
+
+## 7. Amazon S3
+- Object storage to store and retireve any amount of data from anywhere at any time. 
+- Removes the issue of estimating the storage space needed. Simply create your bucket and add as many files as needed. Elastic and scales automatically.
+- Files uploaded to S3 are automatically replicatd across AZs in the region.
+
+In the example, S3 is being used to host a static website. The content is uploaded to S3 and directed to Amazon CloudFront to deliver the content to the internet.
+
+<img src = "https://github.com/user-attachments/assets/0ef3502f-d19b-4272-82e5-0b0ad02ad64e" width = "400">
+
+Amazon S3 has the following benefits:
+- Offers durability, availabiltiy, performance, security, and scalability.
+- Serverless, hence higly scalable.
+- Security, compliance, and audit capabilities.
+
+*How to use S3*
+- Backup and restore: Build scalable, durable and secure backup and restore solutions. (Replaces on-premises capabilities)
+- Disaster Recovery: Avoid expense of a second physical site by storing data, applicaitons, and systems in the cloud or in on-premises environment.
+- Archive: Amazon Simple Storage Service Glacier and S3 Glacier Deep Archive retains objects long-term at low rates. Create an S3 Lifecycle policy to archive objects throughout their lifecyles or upload objects directly.
+- Data Lakes and big data analytics: Extract insights by using query-in-place, analytics and machine learning tools. 
+
+***S3 is desiged for Object storage (Read intesive files tath are not written to) and not block storage (More structured set of dat hosting that is written to) Examples: Pictures, videos, documents and static websites.***
+
+Pay only for what you use, no minimum fee. May vary across regions. 
+
+## 8. AWS Lambda
+-
+
+<>
+
+Amazon Lambda has the following benefits:
+
+*How to use Lambda:*
 
 ***Imp***
-## 7. Amazon S3
-## 8. AWS Lambda
 ## 9. Amazon DynamoDB
